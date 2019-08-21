@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>主页</title>
+
+	<!-- Main Styles -->
+	<link rel="stylesheet" href="assets/styles/style.min.css">
+	
+	<!-- Material Design Icon -->
+	<link rel="stylesheet" href="assets/fonts/material-design/css/materialdesignicons.css">
+
+	<!-- mCustomScrollbar -->
+	<link rel="stylesheet" href="assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.min.css">
+
+	<!-- Waves Effect -->
+	<link rel="stylesheet" href="assets/plugin/waves/waves.min.css">
+
+	<!-- Sweet Alert -->
+	<link rel="stylesheet" href="assets/plugin/sweet-alert/sweetalert.css">
+	<!-- jquery UI CSS -->
+	<link rel="stylesheet" href="dist/jqueryui/jquery-ui.min.css">	
+	<!-- Theme style -->
+	<link rel="stylesheet" type="text/css" href="dist/jqgrid/css/ui.jqgrid-bootstrap.css" />
+	<!-- Dark Themes -->
+	<link rel="stylesheet" href="assets/styles/style-black.min.css">
+	  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+  <!-- jvectormap -->
+  <link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css">
+
+
+</head>
+
+<body>
+<div class="main-menu">
+	<header class="header">
+		<a href="index.html" class="logo"><i class="ico mdi mdi-cube-outline"></i>MyAdmin</a>
+		<button type="button" class="button-close fa fa-times js__menu_close"></button>
+		<div class="user">
+			<a href="#" class="avatar"><img src="user/image" alt=""><span class="status online"></span></a>
+			<h5 class="name"><a href="profile.html">Denise Emily</a></h5>
+			<h5 class="position">Administrator</h5>
+			<!-- /.name -->
+			<div class="control-wrap js__drop_down">
+				<i class="fa fa-caret-down js__drop_down_button"></i>
+				<div class="control-list">
+					<div class="control-item"><a href="profile.html"><i class="fa fa-user"></i> Profile</a></div>
+					<div class="control-item"><a href="#"><i class="fa fa-gear"></i> Settings</a></div>
+					<div class="control-item"><a href="#"><i class="fa fa-sign-out"></i> Log out</a></div>
+				</div>
+				<!-- /.control-list -->
+			</div>
+			<!-- /.control-wrap -->
+		</div>
+		<!-- /.user -->
+	</header>
+	<!-- /.header -->
+	<div class="content" >
+
+		<div class="navigation">
+			<h5 class="title">Navigation</h5>
+
+					
+					<!-- /.sub-menu js__content -->
+				</li>
+				<li>
+					<a class="waves-effect" href="#"><i class="menu-icon mdi mdi-email"></i><span>Mail</span><span class="notice notice-danger">New</span></a>
+				</li>
+			
+			<!-- /.menu js__accordion -->
+			<h5 class="title">Extra</h5>
+			<!-- /.title -->
+			<ul class="menu js__accordion" id="menu_nav">
+				
+					
+					
+					<!-- /.sub-menu js__content -->
+				
+				<li>
+					
+					<!-- /.sub-menu js__content -->
+				</li>
+				<li class="current active" >
+					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-table"></i><span>系统安全管理</span><span class="menu-arrow fa fa-angle-down"></span></a>
+					<ul class="sub-menu js__content">
+
+						<li class="current"><a href="Admin/main.html">用户管理</a></li>
+						<li class="current"><a href="Function/main.html">功能管理</a></li>
+					</ul>
+					<!-- /.sub-menu js__content -->
+				</li>
+				<li class="current active" >
+					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-table"></i><span>供热缴费管理</span><span class="menu-arrow fa fa-angle-down"></span></a>
+					<ul class="sub-menu js__content">
+
+						<li class="current"><a href="fee/HouseType/main.html">房子类型管理</a></li>
+						<li class="current"><a href="fee/HtHouse/main.html">公建管理</a></li>
+						<li class="current"><a href="fee/HeatingPrice/main.html">热水价格管理</a></li>
+					</ul>
+					<!-- /.sub-menu js__content -->
+				</li>
+				<li>
+				<li class="current active" >
+					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-table"></i><span>客户服务</span><span class="menu-arrow fa fa-angle-down"></span></a>
+					<ul class="sub-menu js__content">
+
+						<li class="current"><a href="complain/complaintype/main.html">投诉类型管理</a></li>
+						<li class="current"><a href="complain/homecomplain/main.html">住宅投诉管理</a></li>
+					</ul>
+					<!-- /.sub-menu js__content -->
+				</li>
+					
+					<!-- /.sub-menu js__content -->
+				</li>
+				<li>
+					
+					<!-- /.sub-menu js__content -->
+				</li>
+			</ul>
+			<!-- /.menu js__accordion -->
+		</div>
+		<!-- /.navigation -->
+	</div>
+	<!-- /.content -->
+</div>
+<!-- /.main-menu -->
+
+<div class="fixed-navbar">
+	<div class="pull-left">
+		<button type="button" class="menu-mobile-button glyphicon glyphicon-menu-hamburger js__menu_mobile"></button>
+		
+		<!-- /.page-title -->
+	</div>
+	<!-- /.pull-left -->
+	<div class="pull-right">
+		<div class="ico-item">
+			<a href="#" class="ico-item mdi mdi-magnify js__toggle_open" data-target="#searchform-header"></a>
+			<form action="#" id="searchform-header" class="searchform js__toggle"><input type="search" placeholder="Search..." class="input-search"><button class="mdi mdi-magnify button-search" type="submit"></button></form>
+			<!-- /.searchform -->
+		</div>
+		<!-- /.ico-item -->
+		<a href="#" class="ico-item mdi mdi-email notice-alarm js__toggle_open" data-target="#message-popup"></a>
+		<a href="#" class="ico-item pulse"><span class="ico-item mdi mdi-bell notice-alarm js__toggle_open" data-target="#notification-popup"></span></a>
+		<a href="#" class="ico-item mdi mdi-logout js__logout"></a>
+	</div>
+	<!-- /.pull-right -->
+</div>
+<!-- /.fixed-navbar -->
+
+
+	<!-- /.content -->
+</div>
+<!-- /#notification-popup -->
+
+
+	<!-- /.content -->
+</div>
+<!-- /#message-popup -->
+<section id="maincontent" >
+	<div class="main-content" >
+		<div class="row small-spacing" >
+			<div class="col-xs-12">
+				<div class="box-content" style="background-color: white">
+					<div style="text-align:right">
+						<button type="button" class="btn btn-primary">查看</button>
+						<button type="button" class="btn btn-success">删除</button>
+						<button type="button" class="btn btn-danger">修改</button>
+					</div>
+					<table id="example-edit" style="width: 100%" class="table table-bordered"">
+						<thead>
+							<tr>
+								<th>用户id</th>
+								<th>用户密码</th>
+								<th>用户名</th>
+							</tr>
+						</thead>
+					
+						<tbody>
+							<tr>
+								<td>Tiger Nixon</td>
+								<td>System Architect</td>
+								<td>Edinburgh</td>
+							</tr>
+							
+						</tbody>
+					</table>
+					<div style="text-align:center">
+						<button type="button" class="btn btn-primary">首页</button>
+						<button type="button" class="btn btn-success">上一页</button>
+						<button type="button" class="btn btn-danger">下一页</button>
+						<button type="button" class="btn btn-warning">末页</button>
+					</div>
+				</div>
+			</div>
+			</div>
+				<!-- /.box-content -->
+			<!-- /.col-xs-12 -->
+		</div>
+ </section>
+				<!-- /.box-content -->
+	
+			<!-- /.col-xs-12 -->
+	
+		<!-- /.row small-spacing -->		
+	<!-- /.main-content --><!--/#wrapper -->
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="assets/script/html5shiv.min.js"></script>
+		<script src="assets/script/respond.min.js"></script>
+	<![endif]-->
+	<!-- 
+
+	
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="assets/scripts/jquery.min.js"></script>
+	<script src="assets/scripts/modernizr.min.js"></script>
+	<script src="assets/plugin/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="assets/plugin/nprogress/nprogress.js"></script>
+	<script src="assets/plugin/sweet-alert/sweetalert.min.js"></script>
+	<script src="assets/plugin/waves/waves.min.js"></script>
+
+	<!-- Data Tables -->
+
+
+	<script src="assets/plugin/editable-table/mindmup-editabletable.js"></script>
+
+
+	<script src="assets/scripts/main.min.js"></script>
+		
+	
+	
+	<!-- JQuery Form Plugin -->
+	<script type="text/javascript" src="dist/jqueryform/jquery.form.min.js"></script>
+	
+	<script type="text/ecmascript" src="dist/jqgrid/js/i18n/grid.locale-cn.js"></script>
+	
+	<script type="text/ecmascript" src="dist/jqgrid/js/jquery.jqGrid.js"></script>
+	
+	  <!-- jquery UI JS -->
+  <script type="text/javascript" src="dist/jqueryui/jquery-ui.min.js"></script>
+	<!-- JQuery From -->
+	
+<!-- jQuery validate验证框架 -->
+    <script src="dist/bootstrap3-dialog/js/bootstrap-dialog.min.js"></script>
+	<script src="dist/jqueryvalidate/jquery.validate.min.js"></script>
+	<script src="dist/jqueryvalidate/additional-methods.min.js"></script>
+	<script src="dist/jqueryvalidate/localization/messages_zh.min.js"></script>
+	<script src="dist/jqueryvalidate/customer_validation.js"></script>
+
+	<script src="js/index.js"></script>
+	
+</body>
+</html>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.neusoft.ht.SystemSafety.mapper.IuseInfoMapper">
+
+ <!-- 没有关联属性的结果映射 -->
+  <resultMap id="UserResultMap" type="UserInfo" >
+  	<result property="uuserid" column="UUSERID" />
+   <result property="sex" column="Sex" />
+   <result property="age" column="AGE" />
+   <result property="photo" column="PHOTO" />
+   <result property="photoFileName" column="PHOTOFileName" />
+   <result property="photoContentType" column="PhotoContentType" />
+   <result property="tel" column="Tel" />
+   <result property="mobile" column="Mobile" />
+  </resultMap>
+  
+  
+<resultMap id="selectListWithFunctionById" type="UserInfo" extends="UserResultMap">
+  <collection property="functions"  resultMap="com.neusoft.ht.SystemSafety.mapper.IFunctionMapper.FunctionResultMap" />
+  </resultMap>
+ <resultMap id="UserInfoResultMapWithFunction" type="UserInfo"  extends="selectListWithFunctionById" >
+ <association property="admin"  resultMap="com.neusoft.ht.login.mapper.IUserMapper.UserResultMap" />
+ </resultMap>
+ <insert id="create">
+   insert into HT_UserInfo values (#{uuserid},#{sex},#{age},#{photo},#{photoFileName},#{photoContentType},#{tel},#{mobile})
+ </insert>
+ 
+  <update id="update">
+   update HT_UserInfo set Sex=#{sex},AGE=#{age},PHOTO=#{photo},PHOTOFileName=#{photoFileName},PhotoContentType=#{photoContentType},Tel=#{tel},Mobile=#{mobile} where UUSERID=#{uuserid}
+  </update>
+  
+  <delete id="delete">
+   delete from HT_UserInfo where UUSERID=#{uuserid}
+  </delete>
+   
+ <select id="selectListWithAll" resultMap="UserResultMap">
+  select * from HT_UserInfo
+ </select>
+ 
+  <select id="selectListById" resultMap="UserResultMap">
+  select * from HT_UserInfo where UUSERID=#{uuserid}
+ </select>
+ 
+
+ <select id="selectWithFunction" resultMap="UserInfoResultMapWithFunction">
+    select a.*, c.* from HT_UserInfo a  left outer join   HT_FunctionUser b on a.UUSERID=b.UUserID
+   left outer join HT_Function c on b.FunNo=c.FUNNO 
+</select>
+ 
+ <!-- 查询关联的功能 -->
+	<select id="selectListWithFunctionById" resultMap="UserInfoResultMapWithFunction">
+	 select a.*,b.*,d.* from HT_UserInfo a left outer join HT_User b  on a.UUSERID=b.UUSERID left outer join  HT_FunctionUser c
+	 on b.UUSERID=c.UUserID left outer join HT_Function d on c.FunNo=d.FUNNO where a.UUSERID=#{id}
+	 </select>
+
+</mapper>
+
